@@ -1,4 +1,4 @@
-# Django settings for twango_tmp project.
+# Django settings for twango project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -48,7 +48,7 @@ MEDIA_URL = ''
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'hq_gf^-)g&!2(7!a0guyqadml4!=l&g%)(+@cy39o3yss&pi$w'
+SECRET_KEY = 'e3$_i_oxf(-4#u*%zkz#ej&102p-z59qbqt9p%+qz+fc36+4=6'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -63,7 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'twango_tmp.urls'
+ROOT_URLCONF = 'twango.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
