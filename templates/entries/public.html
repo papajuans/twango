@@ -1,0 +1,24 @@
+{% load pagination_tags %}
+<!doctype html>
+<html>
+<head>
+	<title>Public Timeline</title>
+</head>	
+
+<body>
+	<h1>Twango</h1>
+	<ol id="timeline">
+		{% autopaginate entries 5 %}
+		{% for entry in entries %}
+			<li>
+				<strong>{{ entry.user.username }}</strong> said:
+				{{ entry.message }}
+				<em>{{ entry.date_posted }}</em>
+			</li>
+		{% endfor %}
+	</ol>
+	<div class="paging">
+		{% paginate %}
+	</div>
+</body>
+</html>
