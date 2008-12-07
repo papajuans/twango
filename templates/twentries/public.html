@@ -8,11 +8,11 @@
 <body>
 	<h1>Twango</h1>
 	<ol id="timeline">
-		{% autopaginate entries 5 %}
-		{% for entry in entries %}
+		{% autopaginate twentries 5 %}
+		{% for entry in twentries %}
 			<li>
 				<strong>{{ entry.user.username }}</strong> said:
-				{{ entry.message }}
+				{{ entry.content }}
 				<em>{{ entry.date_posted }}</em>
 			</li>
 		{% endfor %}

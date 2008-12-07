@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import *
 
-urlpatterns = patterns('twango.entries.views',
+urlpatterns = patterns('twango.twentries.views',
     (r'^$', 'public'),
 )
