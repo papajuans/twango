@@ -1,11 +1,9 @@
+{% extends "base.html" %}
 {% load pagination_tags %}
-<!doctype html>
-<html>
-<head>
-	<title>Public Timeline</title>
-</head>	
 
-<body>
+{% block title %}Public Timeline - {{ block.super }}{% endblock %}
+
+{% block main_content %}
 	<h1>Twango</h1>
 	<ol id="timeline">
 		{% autopaginate twentries 5 %}
@@ -20,5 +18,4 @@
 	<div class="paging">
 		{% paginate %}
 	</div>
-</body>
-</html>
+{% endblock %}
