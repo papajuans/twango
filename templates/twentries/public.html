@@ -5,6 +5,17 @@
 
 {% block main_content %}
 	<h1>Twango</h1>
+	
+	<form method="POST" action="/twentries/create/"> <!-- TODO call url reverse -->
+		<fieldset>
+			<legend>What say you?</legend>
+			<ul>
+				{{ form.as_ul }}
+			</ul>
+			<input type="submit" value="Update" />
+		</fieldset>
+	</form>
+	
 	<ol id="timeline">
 		{% autopaginate twentries 5 %}
 		{% for entry in twentries %}
