@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load twentry_tags %}
 {% load pagination_tags %}
 
 {% block title %}Public Timeline - {{ block.super }}{% endblock %}
@@ -19,12 +20,10 @@
 	{% endif %}
 	
 	<ol id="timeline">
-		{% autopaginate twentries 5 %}
-		{% for entry in twentries %}
+		{% autopaginate twentries 10 %}
+		{% for t in twentries %}
 			<li>
-				<strong>{{ entry.user.username }}</strong> said:
-				{{ entry.content }}
-				<em>{{ entry.date_posted }}</em>
+				{% twentry t %}
 			</li>
 		{% endfor %}
 	</ol>
