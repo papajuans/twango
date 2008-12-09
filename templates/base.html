@@ -2,9 +2,21 @@
 <html>
 <head>
 	<title>{% block title %}Twango{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" media="all" href="{{ MEDIA_URL }}css/reset.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="{{ MEDIA_URL }}css/twango.css" />
+	
 	{% block extra_head %}{% endblock %}
 </head>
 <body>
+	{% block messages %}
+        {% if messages %}
+            <ul class="messages grid_12">
+                {% for message in messages %}
+                <li><span>{{ message }}</span></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endblock %}
 	{% block main_content %}{% endblock %}
 	{% block extra_body %}{% endblock %}
 </body>
