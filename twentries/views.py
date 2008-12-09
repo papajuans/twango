@@ -4,6 +4,7 @@ from django.template import RequestContext
 from twentries.forms import TwentryForm
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 def public(request):
     form = TwentryForm()
@@ -11,11 +12,13 @@ def public(request):
         'twentries/public.html',
         {
             'twentries': Twentry.objects.order_by('-date_posted'),
-            'form': form
+            'form': form,
+            'user': request.user,
         },
         context_instance = RequestContext(request),
     )
 
+@login_required
 def create(request):
     form = TwentryForm(request.POST or None)
     if form.is_valid():

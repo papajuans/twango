@@ -2,3 +2,4 @@
 dev.db
 .project
 .pydevproject
+.tmp*

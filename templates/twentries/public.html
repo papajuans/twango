@@ -6,7 +6,8 @@
 {% block main_content %}
 	<h1>Twango</h1>
 	
-	<form method="POST" action="/twentries/create/"> <!-- TODO call url reverse -->
+	{% if user.is_authenticated %}
+	<form method="POST" action="{% url create_twentry %}">
 		<fieldset>
 			<legend>What say you?</legend>
 			<ul>
@@ -15,6 +16,7 @@
 			<input type="submit" value="Update" />
 		</fieldset>
 	</form>
+	{% endif %}
 	
 	<ol id="timeline">
 		{% autopaginate twentries 5 %}
