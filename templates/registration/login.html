@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Login - {{ block.super }}{% endblock %}
+
+{% block main_content %}
+	<h1>Login</h1>
+
+	{% if form.errors %}
+	<p>Your username and password didn't match. Please try again.</p>
+	{% endif %}
+	<form method="POST" action="">
+		<fieldset>
+			<legend>Login Form</legend>
+			<ul>
+				{{ form.as_ul }}
+			</ul>
+			<input type="hidden" name="next" value="{{ next }}" />
+			<input type="submit" value="Login" />
+		</fieldset>
+	</form>
+{% endblock %}

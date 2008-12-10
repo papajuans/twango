@@ -20,6 +20,16 @@ DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
+
+#EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_HOST_USER = '@gmail.com'
+#EMAIL_HOST_PASSWORD = ''
+#EMAIL_PORT = 587
+#EMAIL_USE_TLS = True
+
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 25
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -56,6 +66,8 @@ ADMIN_MEDIA_PREFIX = '/media/admin/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'e3$_i_oxf(-4#u*%zkz#ej&102p-z59qbqt9p%+qz+fc36+4=6'
+
+ACCOUNT_ACTIVATION_DAYS = 14
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -96,4 +108,5 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'twentries',
     'pagination',
+    'registration',
 )
