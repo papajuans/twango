@@ -1,5 +1,30 @@
 /* base */
-
+a { text-decoration:none; color:#006699; }
 
 
 /* template */
+#pg { width:960px; margin:0 auto; }
+#hd { padding:10px; }
+#bd { }
+#ft { padding:10px 0 40px 0; text-align:right; clear:both; }
+#content { float:left; width:680px; padding:10px; }
+#sd { float:right; width: 230px; padding:10px; }
+
+/* */
+#twentry-form { margin-bottom:14px; }
+#twentry-form label { display:none; }
+#twentry-form textarea { height:2.5em;width:500px;}
+#twentry-form li { float:left; margin-right:7px;}
+#timeline { margin-top:7px; }
+#timeline li { clear: both; padding:2px; border-bottom:solid 2px #f0f0f0; zoom:1; }
+#timeline li:after{display:block;clear:both;visibility:hidden;content:'.';height:0;}
+#timeline div.person { float:left; text-align:center; margin-right:10px; }
+#timeline div.person a { text-decoration:none; }
+#timeline div.person span.username { display:none; }
+#timeline a.username { font-weight:bold; }
+#timeline span.date-posted { font-size:10px; color:#999999; font-style:italic; }
+
+div.paging { clear: both; padding-top:21px; }
+
+#sd div.person { background:#f6f6f6; padding:7px; }
+#sd ul { padding:7px; }

@@ -14,6 +14,8 @@ urlpatterns = patterns('',
     #    {'next_page':'/' },
     #    name='auth_logout'),
     url(r'^accounts/', include('registration.urls')),
+    url(r'^friends/', include('socialgraph.urls')),
+    url(r'^profile/', include('profile.urls')),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),

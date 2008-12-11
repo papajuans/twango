@@ -109,4 +109,7 @@ INSTALLED_APPS = (
     'twentries',
     'pagination',
     'registration',
+    'socialgraph',
+    'profile',
+    'gravatar',
 )

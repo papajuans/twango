@@ -1,3 +1,6 @@
-<strong>{{ twentry.user.username }}</strong> said:
+{% load profile_tags %}
+
+{% person twentry.user %}
+<a class="username" href="{% url profile_detail twentry.user.username %}">{{ twentry.user.username }}</a>
 {{ twentry.content }}
-<em>{{ twentry.date_posted }}</em>
+<span class="date-posted">{{ twentry.date_posted }}</span>
