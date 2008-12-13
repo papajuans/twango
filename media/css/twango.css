@@ -18,13 +18,18 @@ a { text-decoration:none; color:#006699; }
 #timeline { margin-top:7px; }
 #timeline li { clear: both; padding:2px; border-bottom:solid 2px #f0f0f0; zoom:1; }
 #timeline li:after{display:block;clear:both;visibility:hidden;content:'.';height:0;}
-#timeline div.person { float:left; text-align:center; margin-right:10px; }
+#content #timeline div.person { float:left; text-align:center; margin-right:10px; padding:0; border:none; }
 #timeline div.person a { text-decoration:none; }
 #timeline div.person span.username { display:none; }
 #timeline a.username { font-weight:bold; }
 #timeline span.date-posted { font-size:10px; color:#999999; font-style:italic; }
 
 div.paging { clear: both; padding-top:21px; }
+
+#content div.person { border-bottom:solid 1px #cccccc; padding:0 0 14px 0; zoom:1; }
+#content div.person:after{display:block;clear:both;visibility:hidden;content:'.';height:0;}
+#content div.person span{ font-size:32px; float:left; margin:10px 0 0 14px; }
+#content div.person img { float:left; }
 
 #sd div.person { background:#f6f6f6; padding:7px; }
 #sd ul { padding:7px; }

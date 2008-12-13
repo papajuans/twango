@@ -32,6 +32,7 @@
 			{% block main_content %}{% endblock %}
 		</div>
 		<div id="sd">
+			{% block side_content %}
 			{% if user.is_authenticated %}
 				{% person user %}
 				<ul>
@@ -49,6 +50,7 @@
 					</li>
 				</ul>
 			{% endif %}
+			{% endblock %}
 		</div>
 	</div>
 	<div id="ft">

@@ -1,7 +1,7 @@
 {% load gravatar %}
 <div class="person">
-    <a href="{% url profile_detail user.username %}">
-    	{% gravatar user 48 %}<br />
+    <a href="{% url tw_user user.username %}">
+    	{% gravatar user 48 %}
         <span class="username">{{ user.username }}</span>
     </a>
 </div>

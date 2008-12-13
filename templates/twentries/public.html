@@ -1,33 +1,9 @@
 {% extends "base.html" %}
 {% load twentry_tags %}
-{% load pagination_tags %}
 
 {% block title %}Public Timeline - {{ block.super }}{% endblock %}
 
-{% block main_content %}
-	{% if user.is_authenticated %}
-	<form id="twentry-form" method="POST" action="{% url create_twentry %}">
-		<fieldset>
-			<legend>What say you?</legend>
-			<ol>
-				{{ form.as_ul }}
-				<li>
-					<input type="submit" value="Update" />
-				</li>
-			</ol>
-		</fieldset>
-	</form>
-	{% endif %}
-	
-	<ol id="timeline">
-		{% autopaginate twentries 10 %}
-		{% for t in twentries %}
-			<li>
-				{% twentry t %}
-			</li>
-		{% endfor %}
-	</ol>
-	<div class="paging">
-		{% paginate %}
-	</div>
+{% block main_content %}	
+	{% twentry_form %}
+	{% twentry_list twentries %}
 {% endblock %}

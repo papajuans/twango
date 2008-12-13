@@ -1,0 +1,14 @@
+{% load pagination_tags %}
+{% load twentry_tags %}
+
+<ol id="timeline">
+	{% autopaginate twentries 10 %}
+	{% for t in twentries %}
+		<li>
+			{% twentry t %}
+		</li>
+	{% endfor %}
+</ol>
+<div class="paging">
+	{% paginate %}
+</div>

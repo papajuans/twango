@@ -1,0 +1,13 @@
+{% if user.is_authenticated %}
+<form id="twentry-form" method="POST" action="{% url create_twentry %}">
+	<fieldset>
+		<legend>What say you?</legend>
+		<ol>
+			{{ form.as_ul }}
+			<li>
+				<input type="submit" value="Update" />
+			</li>
+		</ol>
+	</fieldset>
+</form>
+{% endif %}

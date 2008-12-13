@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load twentry_tags %}
+{% load profile_tags %}
+
+{% block title %}{{ the_user.username }}'s Timeline - {{ block.super }}{% endblock %}
+
+{% block main_content %}	
+	{% person the_user %}
+	{% twentry_list twentries %}
+{% endblock %}
