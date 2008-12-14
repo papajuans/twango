@@ -8,7 +8,7 @@ import os.path
 PROJECT_DIR = os.path.dirname(__file__)
 
 ADMINS = (
-    # ('Ricky Rosario', 'rickyrosario@gmail.com'),
+    ('Ricky Rosario', 'rickyrosario@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -19,7 +19,6 @@ DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
-
 
 #EMAIL_HOST = 'smtp.gmail.com'
 #EMAIL_HOST_USER = '@gmail.com'
@@ -94,9 +93,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 ROOT_URLCONF = 'twango.urls'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
     os.path.join(PROJECT_DIR, 'templates'),
 )
 
@@ -106,6 +102,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
+    'django.contrib.humanize',
     'twentries',
     'pagination',
     'registration',

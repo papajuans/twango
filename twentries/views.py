@@ -50,5 +50,5 @@ def create(request):
             next = reverse('public_timeline')
         return HttpResponseRedirect(next)
     
-    return HttpResponseRedirect('public_timeline')
+    return HttpResponseRedirect(reverse('public_timeline'))
         
